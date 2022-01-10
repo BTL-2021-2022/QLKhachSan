@@ -1,0 +1,122 @@
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.exe
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.deps.json
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.runtimeconfig.json
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.runtimeconfig.dev.json
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\ref\BaiTapLon.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.pdb
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Humanizer.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.AssemblyReference.cache
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.Form1.resources
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.GenerateResource.cache
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.GeneratedMSBuildEditorConfig.editorconfig
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.AssemblyInfoInputs.cache
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.AssemblyInfo.cs
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.CoreCompileInputs.cache
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.CopyComplete
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\ref\BaiTapLon.dll
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.pdb
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.genruntimeconfig.cache
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.Properties.Resources.resources
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.Form3.resources
+E:\LapTrinhWin\Bài tập lớn\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.QuanLyDichVu.resources
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.exe
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.deps.json
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.runtimeconfig.json
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.runtimeconfig.dev.json
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\ref\BaiTapLon.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BaiTapLon.pdb
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Humanizer.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.AssemblyReference.cache
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.Form1.resources
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.Properties.Resources.resources
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.Form3.resources
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.QuanLyDichVu.resources
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.GenerateResource.cache
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.GeneratedMSBuildEditorConfig.editorconfig
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.AssemblyInfoInputs.cache
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.AssemblyInfo.cs
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.CoreCompileInputs.cache
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.csproj.CopyComplete
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.dll
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\ref\BaiTapLon.dll
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.pdb
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.genruntimeconfig.cache
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DoanhThuPhong.resources
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\itextsharp.dll
+E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DoanhThuDichVu.resources
