@@ -120,3 +120,4 @@ E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DoanhThuPhong.resources
 E:\btl\BaiTapLon\bin\Debug\net5.0-windows\itextsharp.dll
 E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
 E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DoanhThuDichVu.resources
+E:\BTL\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DangNhap.resources

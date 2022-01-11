@@ -40,6 +40,7 @@ namespace BaiTapLon
             this.trảPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêTheoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doanhThuDịchVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -121,7 +122,8 @@ namespace BaiTapLon
             // thốngKêToolStripMenuItem1
             // 
             this.thốngKêToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thốngKêTheoToolStripMenuItem});
+            this.thốngKêTheoToolStripMenuItem,
+            this.doanhThuDịchVụToolStripMenuItem});
             this.thốngKêToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.thốngKêToolStripMenuItem1.Name = "thốngKêToolStripMenuItem1";
             this.thốngKêToolStripMenuItem1.Size = new System.Drawing.Size(100, 29);
@@ -130,9 +132,16 @@ namespace BaiTapLon
             // thốngKêTheoToolStripMenuItem
             // 
             this.thốngKêTheoToolStripMenuItem.Name = "thốngKêTheoToolStripMenuItem";
-            this.thốngKêTheoToolStripMenuItem.Size = new System.Drawing.Size(235, 28);
+            this.thốngKêTheoToolStripMenuItem.Size = new System.Drawing.Size(241, 28);
             this.thốngKêTheoToolStripMenuItem.Text = "Doanh thu phòng";
             this.thốngKêTheoToolStripMenuItem.Click += new System.EventHandler(this.thốngKêTheoToolStripMenuItem_Click);
+            // 
+            // doanhThuDịchVụToolStripMenuItem
+            // 
+            this.doanhThuDịchVụToolStripMenuItem.Name = "doanhThuDịchVụToolStripMenuItem";
+            this.doanhThuDịchVụToolStripMenuItem.Size = new System.Drawing.Size(241, 28);
+            this.doanhThuDịchVụToolStripMenuItem.Text = "Doanh thu dịch vụ";
+            this.doanhThuDịchVụToolStripMenuItem.Click += new System.EventHandler(this.doanhThuDịchVụToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -163,5 +172,6 @@ namespace BaiTapLon
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem thốngKêTheoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trảPhòngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doanhThuDịchVụToolStripMenuItem;
     }
 }

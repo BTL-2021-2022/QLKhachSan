@@ -50,5 +50,11 @@ namespace BaiTapLon
         {
           
         }
+
+        private void doanhThuDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoanhThuDichVu frm = new DoanhThuDichVu();
+            frm.Show();
+        }
     }
 }

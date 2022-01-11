@@ -44,12 +44,12 @@ namespace BaiTapLon
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.data_doanhthuphong = new System.Windows.Forms.DataGridView();
+            this.data_doanhthudv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.data_doanhthuphong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_doanhthudv)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_pdf
@@ -61,6 +61,7 @@ namespace BaiTapLon
             this.btn_pdf.TabIndex = 19;
             this.btn_pdf.Text = "Xuất Báo Cáo PDF";
             this.btn_pdf.UseVisualStyleBackColor = false;
+            this.btn_pdf.Click += new System.EventHandler(this.btn_pdf_Click_1);
             // 
             // txt_tongtien
             // 
@@ -95,6 +96,7 @@ namespace BaiTapLon
             this.button2.TabIndex = 16;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -107,6 +109,7 @@ namespace BaiTapLon
             this.button1.TabIndex = 15;
             this.button1.Text = "Thống Kê";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -146,9 +149,9 @@ namespace BaiTapLon
             this.dateTimePicker1.Size = new System.Drawing.Size(228, 27);
             this.dateTimePicker1.TabIndex = 11;
             // 
-            // data_doanhthuphong
+            // data_doanhthudv
             // 
-            this.data_doanhthuphong.AllowUserToAddRows = false;
+            this.data_doanhthudv.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -156,16 +159,16 @@ namespace BaiTapLon
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_doanhthuphong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.data_doanhthuphong.ColumnHeadersHeight = 29;
-            this.data_doanhthuphong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.data_doanhthudv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.data_doanhthudv.ColumnHeadersHeight = 29;
+            this.data_doanhthudv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.data_doanhthuphong.Location = new System.Drawing.Point(108, 135);
-            this.data_doanhthuphong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.data_doanhthuphong.Name = "data_doanhthuphong";
+            this.data_doanhthudv.Location = new System.Drawing.Point(108, 135);
+            this.data_doanhthudv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.data_doanhthudv.Name = "data_doanhthudv";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -173,11 +176,12 @@ namespace BaiTapLon
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_doanhthuphong.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.data_doanhthuphong.RowHeadersWidth = 51;
-            this.data_doanhthuphong.RowTemplate.Height = 25;
-            this.data_doanhthuphong.Size = new System.Drawing.Size(1037, 389);
-            this.data_doanhthuphong.TabIndex = 10;
+            this.data_doanhthudv.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.data_doanhthudv.RowHeadersWidth = 51;
+            this.data_doanhthudv.RowTemplate.Height = 25;
+            this.data_doanhthudv.Size = new System.Drawing.Size(1037, 389);
+            this.data_doanhthudv.TabIndex = 10;
+            this.data_doanhthudv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_doanhthuphong_CellContentClick);
             // 
             // Column1
             // 
@@ -219,7 +223,7 @@ namespace BaiTapLon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 651);
+            this.ClientSize = new System.Drawing.Size(1222, 632);
             this.Controls.Add(this.btn_pdf);
             this.Controls.Add(this.txt_tongtien);
             this.Controls.Add(this.label3);
@@ -229,10 +233,10 @@ namespace BaiTapLon
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.data_doanhthuphong);
+            this.Controls.Add(this.data_doanhthudv);
             this.Name = "DoanhThuDichVu";
-            this.Text = "DoanhThuDichVu";
-            ((System.ComponentModel.ISupportInitialize)(this.data_doanhthuphong)).EndInit();
+            this.Text = "Doanh thu dịch vụ ";
+            ((System.ComponentModel.ISupportInitialize)(this.data_doanhthudv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,7 +253,7 @@ namespace BaiTapLon
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView data_doanhthuphong;
+        private System.Windows.Forms.DataGridView data_doanhthudv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

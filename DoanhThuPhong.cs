@@ -41,7 +41,7 @@ namespace BaiTapLon
                           { 
                               mahd = hd.MaHoaDon,
                               maphieuthuep = phieutp.MaPhieuThuePhong,
-                              tongtien = hd.TongTien,
+                             //tongtien = hd.TongTien,
                               ngaythanhtoan = hd.NgayThanhToan,
                               makh = phieutp.MaKh
                           }).ToList();
@@ -53,28 +53,28 @@ namespace BaiTapLon
                             select new
                             {
                                 mp = ct.MaPhong,
-                                mlp = ps.MaLoaiPhong,
+                                mlp = ps.MaLoaiPhong,     
                             }).ToList().FirstOrDefault();
-                data_doanhthuphong.Rows.Add();
-                data_doanhthuphong.Rows[i].Cells[0].Value = list.mp.ToString();
-                data_doanhthuphong.Rows[i].Cells[1].Value = result[i].makh.ToString();
-                data_doanhthuphong.Rows[i].Cells[2].Value = String.Format("{0:dd/MM/yyyy}", result[i].ngaythanhtoan);
+                data_doanhthudv.Rows.Add();
+                data_doanhthudv.Rows[i].Cells[0].Value = list.mp.ToString();
+                data_doanhthudv.Rows[i].Cells[1].Value = result[i].makh.ToString();
+                data_doanhthudv.Rows[i].Cells[2].Value = String.Format("{0:dd/MM/yyyy}", result[i].ngaythanhtoan);
                 var lp = (from d in db.LoaiPhongs
                           where d.MaLoaiPhong == list.mlp
                           select d.DonGia
                           ).ToList().FirstOrDefault();
-                data_doanhthuphong.Rows[i].Cells[3].Value = ((float)(lp)).ToString("N0");
+                data_doanhthudv.Rows[i].Cells[3].Value = ((float)(lp)).ToString("N0");
             }
             thanhtien();
     }
 
         private void thanhtien()
         {
-            int sc = data_doanhthuphong.Rows.Count;
+            int sc = data_doanhthudv.Rows.Count;
             float tien = 0;
             for (int m = 0; m < sc ; m++)
             {
-                tien += float.Parse(data_doanhthuphong.Rows[m].Cells[3].Value.ToString());
+                tien += float.Parse(data_doanhthudv.Rows[m].Cells[3].Value.ToString());
             }
             txt_tongtien.Text = tien.ToString("N0");
         }
@@ -86,7 +86,7 @@ namespace BaiTapLon
         private void btn_pdf_Click(object sender, EventArgs e)
         {
            
-            if(data_doanhthuphong.Rows.Count > 0)
+            if(data_doanhthudv.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
@@ -110,7 +110,7 @@ namespace BaiTapLon
                     {
                         try
                         {
-                            PdfPTable pdfTable = new PdfPTable(data_doanhthuphong.Columns.Count);
+                            PdfPTable pdfTable = new PdfPTable(data_doanhthudv.Columns.Count);
                             pdfTable.DefaultCell.Padding = 3;
                             pdfTable.WidthPercentage = 100;
                             pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -118,14 +118,14 @@ namespace BaiTapLon
                             iTextSharp.text.Font fontVN = new iTextSharp.text.Font(baseFont, 12);
                             iTextSharp.text.Font fontVN1 = new iTextSharp.text.Font(baseFont, 12,3, BaseColor.RED);
 
-                            foreach (DataGridViewColumn column in data_doanhthuphong.Columns)
+                            foreach (DataGridViewColumn column in data_doanhthudv.Columns)
                             {
                                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText,fontVN));
                                 cell.BackgroundColor = BaseColor.GREEN;
                                 pdfTable.AddCell(cell);
                             }
 
-                            foreach (DataGridViewRow row in data_doanhthuphong.Rows)
+                            foreach (DataGridViewRow row in data_doanhthudv.Rows)
                             {
                                
                                 foreach (DataGridViewCell cell in row.Cells)
@@ -141,11 +141,11 @@ namespace BaiTapLon
                                     Paragraph p2 = new Paragraph(title, fontVN);
                                     p2.Alignment = Element.ALIGN_CENTER;
                                     p2.SpacingAfter = 12;
-                                    int sc = data_doanhthuphong.Rows.Count;
+                                    int sc = data_doanhthudv.Rows.Count;
                                     float tien = 0;
                                     for (int m = 0; m < sc; m++)
                                     {
-                                        tien += float.Parse(data_doanhthuphong.Rows[m].Cells[3].Value.ToString());
+                                        tien += float.Parse(data_doanhthudv.Rows[m].Cells[3].Value.ToString());
                                     }
                                     Paragraph p3 = new Paragraph($"Tổng doanh thu: {tien.ToString("N0")} VND ", fontVN1);
                                     p3.Alignment = Element.ALIGN_RIGHT;
