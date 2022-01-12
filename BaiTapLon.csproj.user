@@ -16,5 +16,8 @@
     <Compile Update="DoanhThuPhong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="QuanLyTraPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
