@@ -23,7 +23,8 @@ namespace BaiTapLon
                          join chitiet in db.ChiTietThuePhongs on phong.MaPhieuThuePhong equals chitiet.MaPhieuThuePhong
                          join pho in db.Phongs on chitiet.MaPhong equals pho.MaPhong
                          join kh in db.KhachHangs on phong.MaKh equals kh.MaKh
-                         select new { phong.MaPhieuThuePhong, phong.MaKh, phong.NgayDen, phong.NgayDi, pho.MaPhong,kh.SoCmnd };
+                         join loaiphong in db.LoaiPhongs on pho.MaLoaiPhong equals loaiphong.MaLoaiPhong
+                         select new { phong.MaPhieuThuePhong, phong.MaKh, phong.NgayDen, phong.NgayDi, pho.MaPhong,kh.SoCmnd,loaiphong.DonGia };
             ViewPhieuThuePhong.DataSource = query1.ToList();
         }
         private void dichvu()
@@ -61,8 +62,9 @@ namespace BaiTapLon
                          join chitiet in db.ChiTietThuePhongs on phong.MaPhieuThuePhong equals chitiet.MaPhieuThuePhong
                          join pho in db.Phongs on chitiet.MaPhong equals pho.MaPhong
                          join kh in db.KhachHangs on phong.MaKh equals kh.MaKh
+                         join loaiphong in db.LoaiPhongs on pho.MaLoaiPhong equals loaiphong.MaLoaiPhong
                          where (pho.MaPhong==txtMaPhieuThue.Text  || kh.SoCmnd==txtCccd.Text )
-                         select new { phong.MaPhieuThuePhong, phong.MaKh, phong.NgayDen, phong.NgayDi, pho.MaPhong, kh.SoCmnd };
+                         select new { phong.MaPhieuThuePhong, phong.MaKh, phong.NgayDen, phong.NgayDi, pho.MaPhong, kh.SoCmnd,loaiphong.DonGia };
 
             if (ptpTim == null)
             {
@@ -102,17 +104,21 @@ namespace BaiTapLon
 
         private void btnTimDichVu_Click(object sender, EventArgs e)
         {
-            DichVu ptpTim = (from pdp in db.DichVus
-                             where pdp.MaDv == txtMaDichVu.Text
-                             select pdp).FirstOrDefault();
+            /*  var query1 = from PhieuDichVu in db.PhieuDichVus
+                         join dichvu in db.DichVus on PhieuDichVu.MaDv equals dichvu.MaDv
+                         select new { PhieuDichVu.MaDv, PhieuDichVu.MaPhieuThuePhong, PhieuDichVu.SoLuong, PhieuDichVu.TongTien, dichvu.TenDv, dichvu.DonGiaDv };
+          */
+            PhieuDichVu ptpTim = (from PhieuDichVu in db.PhieuDichVus
+                             where PhieuDichVu.MaPhieuThuePhong == txtMaDichVu.Text
+                             select PhieuDichVu).FirstOrDefault();
             var query = from PhieuDichVu in db.PhieuDichVus
                         join dichvu in db.DichVus on PhieuDichVu.MaDv equals dichvu.MaDv
-                        where dichvu.MaDv == txtMaDichVu.Text
+                        where PhieuDichVu.MaPhieuThuePhong == txtMaDichVu.Text
                         select new { PhieuDichVu.MaDv, PhieuDichVu.MaPhieuThuePhong, PhieuDichVu.SoLuong, PhieuDichVu.TongTien, dichvu.TenDv, dichvu.DonGiaDv };
 
             if (ptpTim == null)
             {
-                MessageBox.Show("Không tồn tại mã phiếu dịch vụ !" + txtMaDichVu.Text);
+                MessageBox.Show("Không tồn tại mã phiếu thuê phòng !" + txtMaDichVu.Text);
                 txtMaDichVu.Focus();
                 dichvu();
             }
@@ -121,6 +127,67 @@ namespace BaiTapLon
                 viewPhieuDichVu.DataSource = query.ToList();
 
             }
+        }
+
+        private void ViewPhieuThuePhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(ViewPhieuThuePhong.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                ViewPhieuThuePhong.CurrentRow.Selected = true;
+                txtPhieuThue.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaPhieuThuePhong"].FormattedValue.ToString();
+                txtMaKH.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaKH"].FormattedValue.ToString();
+                txtPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaPhong"].FormattedValue.ToString();
+                txtNgayDen.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["NgayDen"].FormattedValue.ToString();
+                txtgiaPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].FormattedValue.ToString();
+
+            }
+        }
+
+        private void viewPhieuDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void viewPhieuDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (viewPhieuDichVu.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                ViewPhieuThuePhong.CurrentRow.Selected = true;
+                txtDichVu.Text = viewPhieuDichVu.Rows[e.RowIndex].Cells["MaDV"].FormattedValue.ToString();
+                txtTienDichVu.Text = viewPhieuDichVu.Rows[e.RowIndex].Cells["TongTien"].FormattedValue.ToString();
+
+             /*   double a = double.Parse(txtTienDichVu.Text);
+                double b = double.Parse(txtTienPhong.Text);
+                double c = a + b;
+                txtTongTien.Text = c.ToString();*/
+            }
+        }
+
+        private void ViewPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           /* if (ViewPhong.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                ViewPhieuThuePhong.CurrentRow.Selected = true;
+
+                txtgiaPhong.Text = ViewPhong.Rows[e.RowIndex].Cells["DonGia"].FormattedValue.ToString();
+            }*/
+        }
+
+        private void btnTraPhong_Click(object sender, EventArgs e)
+        {
+
+            string a = txtNgayDen.Text;
+            txtNgayDi.Text = DateTime.Now.ToString();
+            string b = txtNgayDi.Text;
+                 TimeSpan timeSpan;
+                
+                     DateTime c = DateTime.Parse(a);
+                     DateTime d = d = DateTime.Now;
+                      timeSpan = d - c;
+                 
+                 txtSoNgayO.Text = timeSpan.Days.ToString();
+                     double x = double.Parse(txtSoNgayO.Text)* double.Parse(txtgiaPhong.Text);
+                     txtTienPhong.Text = x.ToString();
         }
     }
 }

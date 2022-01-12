@@ -75,6 +75,7 @@ namespace BaiTapLon
             this.NgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoCmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtMaDichVu = new System.Windows.Forms.TextBox();
             this.txtMaPhieuThue = new System.Windows.Forms.TextBox();
@@ -85,6 +86,7 @@ namespace BaiTapLon
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCccd = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewPhieuDichVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPhieuThuePhong)).BeginInit();
@@ -112,7 +114,7 @@ namespace BaiTapLon
             // 
             // btnTimDichVu
             // 
-            this.btnTimDichVu.Location = new System.Drawing.Point(1256, 36);
+            this.btnTimDichVu.Location = new System.Drawing.Point(1309, 38);
             this.btnTimDichVu.Name = "btnTimDichVu";
             this.btnTimDichVu.Size = new System.Drawing.Size(94, 29);
             this.btnTimDichVu.TabIndex = 49;
@@ -155,6 +157,7 @@ namespace BaiTapLon
             this.btnTraPhong.TabIndex = 45;
             this.btnTraPhong.Text = "Trả phòng";
             this.btnTraPhong.UseVisualStyleBackColor = true;
+            this.btnTraPhong.Click += new System.EventHandler(this.btnTraPhong_Click);
             // 
             // txtNgayDen
             // 
@@ -357,6 +360,7 @@ namespace BaiTapLon
             this.ViewPhong.RowTemplate.Height = 29;
             this.ViewPhong.Size = new System.Drawing.Size(380, 299);
             this.ViewPhong.TabIndex = 22;
+            this.ViewPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewPhong_CellClick);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -404,6 +408,8 @@ namespace BaiTapLon
             this.viewPhieuDichVu.RowTemplate.Height = 29;
             this.viewPhieuDichVu.Size = new System.Drawing.Size(533, 223);
             this.viewPhieuDichVu.TabIndex = 20;
+            this.viewPhieuDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewPhieuDichVu_CellClick);
+            this.viewPhieuDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewPhieuDichVu_CellContentClick);
             // 
             // MaDV
             // 
@@ -446,13 +452,15 @@ namespace BaiTapLon
             this.NgayDen,
             this.NgayDi,
             this.MaPhong,
-            this.SoCmnd});
+            this.SoCmnd,
+            this.dataGridViewTextBoxColumn3});
             this.ViewPhieuThuePhong.Location = new System.Drawing.Point(90, 81);
             this.ViewPhieuThuePhong.Name = "ViewPhieuThuePhong";
             this.ViewPhieuThuePhong.RowHeadersWidth = 51;
             this.ViewPhieuThuePhong.RowTemplate.Height = 29;
             this.ViewPhieuThuePhong.Size = new System.Drawing.Size(771, 223);
             this.ViewPhieuThuePhong.TabIndex = 21;
+            this.ViewPhieuThuePhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewPhieuThuePhong_CellClick);
             // 
             // MaPhieuThuePhong
             // 
@@ -502,6 +510,14 @@ namespace BaiTapLon
             this.SoCmnd.Name = "SoCmnd";
             this.SoCmnd.Width = 125;
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DonGia";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Giá Phòng";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
             // txtMaPhong
             // 
             this.txtMaPhong.Location = new System.Drawing.Point(151, 373);
@@ -511,7 +527,7 @@ namespace BaiTapLon
             // 
             // txtMaDichVu
             // 
-            this.txtMaDichVu.Location = new System.Drawing.Point(1010, 40);
+            this.txtMaDichVu.Location = new System.Drawing.Point(1071, 38);
             this.txtMaDichVu.Name = "txtMaDichVu";
             this.txtMaDichVu.Size = new System.Drawing.Size(214, 27);
             this.txtMaDichVu.TabIndex = 18;
@@ -546,9 +562,9 @@ namespace BaiTapLon
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(914, 43);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(81, 20);
+            this.label16.Size = new System.Drawing.Size(151, 20);
             this.label16.TabIndex = 13;
-            this.label16.Text = "Mã dịch vụ";
+            this.label16.Text = "Mã phiếu thuê phòng";
             // 
             // label2
             // 
@@ -584,11 +600,21 @@ namespace BaiTapLon
             this.txtCccd.Size = new System.Drawing.Size(214, 27);
             this.txtCccd.TabIndex = 52;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(452, 41);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 20);
+            this.label12.TabIndex = 53;
+            this.label12.Text = "Số căn cước";
+            // 
             // QuanLyTraPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1509, 712);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.txtCccd);
             this.Controls.Add(this.btnTimPhong);
             this.Controls.Add(this.btnTimPhieuThue);
@@ -693,12 +719,14 @@ namespace BaiTapLon
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCccd;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuThuePhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDen;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDi;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCmnd;
-        private System.Windows.Forms.TextBox txtCccd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
