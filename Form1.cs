@@ -48,7 +48,14 @@ namespace BaiTapLon
 
         private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+            QuanLyTraPhong f = new QuanLyTraPhong();
+            f.Show();
+        }
+
+        private void doanhThuDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoanhThuDichVu frm = new DoanhThuDichVu();
+            frm.Show();
         }
     }
 }

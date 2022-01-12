@@ -120,6 +120,7 @@ E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DoanhThuPhong.resources
 E:\btl\BaiTapLon\bin\Debug\net5.0-windows\itextsharp.dll
 E:\btl\BaiTapLon\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
 E:\btl\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DoanhThuDichVu.resources
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\bin\Debug\net5.0-windows\BaiTapLon.exe
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\bin\Debug\net5.0-windows\BaiTapLon.deps.json
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\bin\Debug\net5.0-windows\BaiTapLon.runtimeconfig.json
@@ -183,3 +184,7 @@ C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\ref\BaiTap
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.pdb
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.genruntimeconfig.cache
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.QuanLyTraPhong.resources
+=======
+E:\BTL\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DangNhap.resources
+>>>>>>> 434623feb6b0deba3ae4eae1c456ed1b701be29a
+C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.DangNhap.resources

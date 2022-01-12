@@ -74,6 +74,7 @@ namespace BaiTapLon
             this.NgayDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoCmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtMaDichVu = new System.Windows.Forms.TextBox();
             this.txtMaPhieuThue = new System.Windows.Forms.TextBox();
@@ -83,6 +84,7 @@ namespace BaiTapLon
             this.label2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCccd = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewPhieuDichVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPhieuThuePhong)).BeginInit();
@@ -96,15 +98,17 @@ namespace BaiTapLon
             this.btnTimPhong.TabIndex = 51;
             this.btnTimPhong.Text = "Tìm";
             this.btnTimPhong.UseVisualStyleBackColor = true;
+            this.btnTimPhong.Click += new System.EventHandler(this.btnTimPhong_Click);
             // 
             // btnTimPhieuThue
             // 
-            this.btnTimPhieuThue.Location = new System.Drawing.Point(393, 39);
+            this.btnTimPhieuThue.Location = new System.Drawing.Point(767, 37);
             this.btnTimPhieuThue.Name = "btnTimPhieuThue";
             this.btnTimPhieuThue.Size = new System.Drawing.Size(94, 29);
             this.btnTimPhieuThue.TabIndex = 50;
             this.btnTimPhieuThue.Text = "Tìm";
             this.btnTimPhieuThue.UseVisualStyleBackColor = true;
+            this.btnTimPhieuThue.Click += new System.EventHandler(this.btnTimPhieuThue_Click);
             // 
             // btnTimDichVu
             // 
@@ -114,6 +118,7 @@ namespace BaiTapLon
             this.btnTimDichVu.TabIndex = 49;
             this.btnTimDichVu.Text = "Tìm";
             this.btnTimDichVu.UseVisualStyleBackColor = true;
+            this.btnTimDichVu.Click += new System.EventHandler(this.btnTimDichVu_Click);
             // 
             // btnThoat
             // 
@@ -440,7 +445,8 @@ namespace BaiTapLon
             this.MaKH,
             this.NgayDen,
             this.NgayDi,
-            this.MaPhong});
+            this.MaPhong,
+            this.SoCmnd});
             this.ViewPhieuThuePhong.Location = new System.Drawing.Point(90, 81);
             this.ViewPhieuThuePhong.Name = "ViewPhieuThuePhong";
             this.ViewPhieuThuePhong.RowHeadersWidth = 51;
@@ -487,6 +493,14 @@ namespace BaiTapLon
             this.MaPhong.MinimumWidth = 6;
             this.MaPhong.Name = "MaPhong";
             this.MaPhong.Width = 125;
+            // 
+            // SoCmnd
+            // 
+            this.SoCmnd.DataPropertyName = "SoCmnd";
+            this.SoCmnd.HeaderText = "Số căn cước";
+            this.SoCmnd.MinimumWidth = 6;
+            this.SoCmnd.Name = "SoCmnd";
+            this.SoCmnd.Width = 125;
             // 
             // txtMaPhong
             // 
@@ -539,7 +553,7 @@ namespace BaiTapLon
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 39);
+            this.label2.Location = new System.Drawing.Point(90, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 15;
@@ -563,11 +577,19 @@ namespace BaiTapLon
             this.label1.TabIndex = 11;
             this.label1.Text = "Phiếu thuê phòng";
             // 
+            // txtCccd
+            // 
+            this.txtCccd.Location = new System.Drawing.Point(547, 38);
+            this.txtCccd.Name = "txtCccd";
+            this.txtCccd.Size = new System.Drawing.Size(214, 27);
+            this.txtCccd.TabIndex = 52;
+            // 
             // QuanLyTraPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1509, 712);
+            this.Controls.Add(this.txtCccd);
             this.Controls.Add(this.btnTimPhong);
             this.Controls.Add(this.btnTimPhieuThue);
             this.Controls.Add(this.btnTimDichVu);
@@ -662,11 +684,6 @@ namespace BaiTapLon
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
         private System.Windows.Forms.DataGridView ViewPhieuThuePhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuThuePhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
         private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.TextBox txtMaDichVu;
         private System.Windows.Forms.TextBox txtMaPhieuThue;
@@ -676,5 +693,12 @@ namespace BaiTapLon
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuThuePhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoCmnd;
+        private System.Windows.Forms.TextBox txtCccd;
     }
 }
