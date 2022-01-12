@@ -139,7 +139,23 @@ namespace BaiTapLon
                 txtPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaPhong"].FormattedValue.ToString();
                 txtNgayDen.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["NgayDen"].FormattedValue.ToString();
                 txtgiaPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].FormattedValue.ToString();
+                txtNgayDi.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["NgayDi"].FormattedValue.ToString();
 
+                if (txtNgayDi.Text !=null)
+                {
+                    string a = txtNgayDen.Text;
+                    txtNgayDi.Text = DateTime.Now.ToString();
+                    string b = txtNgayDi.Text;
+                    TimeSpan timeSpan;
+
+                    DateTime c = DateTime.Parse(a);
+                    DateTime d = d = DateTime.Now;
+                    timeSpan = d - c;
+
+                    txtSoNgayO.Text = timeSpan.Days.ToString();
+                    double x = double.Parse(txtSoNgayO.Text) * double.Parse(txtgiaPhong.Text);
+                    txtTienPhong.Text = x.ToString();
+                }
             }
         }
 
@@ -175,19 +191,32 @@ namespace BaiTapLon
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
+            if (txtNgayDi.Text == null)
+            {
+                string a = txtNgayDen.Text;
+                txtNgayDi.Text = DateTime.Now.ToString();
+                string b = txtNgayDi.Text;
+                TimeSpan timeSpan;
 
-            string a = txtNgayDen.Text;
-            txtNgayDi.Text = DateTime.Now.ToString();
-            string b = txtNgayDi.Text;
-                 TimeSpan timeSpan;
-                
-                     DateTime c = DateTime.Parse(a);
-                     DateTime d = d = DateTime.Now;
-                      timeSpan = d - c;
-                 
-                 txtSoNgayO.Text = timeSpan.Days.ToString();
-                     double x = double.Parse(txtSoNgayO.Text)* double.Parse(txtgiaPhong.Text);
-                     txtTienPhong.Text = x.ToString();
+                DateTime c = DateTime.Parse(a);
+                DateTime d = d = DateTime.Now;
+                timeSpan = d - c;
+
+                txtSoNgayO.Text = timeSpan.Days.ToString();
+                double x = double.Parse(txtSoNgayO.Text) * double.Parse(txtgiaPhong.Text);
+                txtTienPhong.Text = x.ToString();
+                PhieuThuePhong pt = (from ptp in db.PhieuThuePhongs
+                                     where ptp.MaPhieuThuePhong == txtPhieuThue.Text
+                                     select ptp).FirstOrDefault();
+                pt.NgayDi = DateTime.Parse(txtNgayDi.Text);
+                db.SaveChanges();
+                phieuthuephong();
+            }
+            else
+            {
+                MessageBox.Show("Phòng này đã được trả");
+            }
+
         }
     }
 }
