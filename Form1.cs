@@ -13,10 +13,15 @@ namespace BaiTapLon
 {
     public partial class Form1 : Form
     {
-        
+        string user;
         public Form1()
         {
             InitializeComponent();
+        }
+        public Form1(string user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void Show_Panel(Form frm)
@@ -56,6 +61,18 @@ namespace BaiTapLon
         {
             DoanhThuDichVu frm = new DoanhThuDichVu();
             frm.Show();
+        }
+
+        private void phiếuDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fPhieuDichVu pdv = new fPhieuDichVu();
+            pdv.Show();
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fHoaDon fhd = new fHoaDon(user);
+            fhd.Show();
         }
     }
 }

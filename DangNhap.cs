@@ -74,7 +74,7 @@ namespace BaiTapLon
                                select nv).ToList();
                 if (manv.Count >0)
                 {
-                    Form1 frm = new Form1();
+                    Form1 frm = new Form1(comboBox1.Text);
                     frm.Show();
                     this.Hide();
                 }
