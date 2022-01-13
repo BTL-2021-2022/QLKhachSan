@@ -113,10 +113,7 @@ namespace BaiTapLon
 
         private void btnTimDichVu_Click(object sender, EventArgs e)
         {
-            /*  var query1 = from PhieuDichVu in db.PhieuDichVus
-                         join dichvu in db.DichVus on PhieuDichVu.MaDv equals dichvu.MaDv
-                         select new { PhieuDichVu.MaDv, PhieuDichVu.MaPhieuThuePhong, PhieuDichVu.SoLuong, PhieuDichVu.TongTien, dichvu.TenDv, dichvu.DonGiaDv };
-          */
+    
             PhieuDichVu ptpTim = (from PhieuDichVu in db.PhieuDichVus
                              where PhieuDichVu.MaPhieuThuePhong == txtMaDichVu.Text
                              select PhieuDichVu).FirstOrDefault();
@@ -193,12 +190,7 @@ namespace BaiTapLon
 
         private void ViewPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           /* if (ViewPhong.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                ViewPhieuThuePhong.CurrentRow.Selected = true;
 
-                txtgiaPhong.Text = ViewPhong.Rows[e.RowIndex].Cells["DonGia"].FormattedValue.ToString();
-            }*/
         }
 
         private void btnTraPhong_Click(object sender, EventArgs e)
@@ -223,11 +215,15 @@ namespace BaiTapLon
                                      select ptp).FirstOrDefault();
                 pt.NgayDi = DateTime.Parse(txtNgayDi.Text);
                 db.SaveChanges();
+                btnTaoHoaDon.Visible=true;
+                btnTinhTien.Visible=true;
                 phieuthuephong();
             }
             else
             {
                 MessageBox.Show("Phòng này đã được trả");
+                btnTaoHoaDon.Visible = false;
+                btnTinhTien.Visible = false;
             }
 
         }
@@ -264,9 +260,16 @@ namespace BaiTapLon
 
         private void btnTaoHoaDon_Click(object sender, EventArgs e)
         {
-            fHoaDon fhd = new fHoaDon(user);
-            fhd.Show();
-            
+            if(txtNgayDi.Text != "")
+            {
+                fHoaDon fhd = new fHoaDon(user);
+                fhd.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng trả phòng trước khi tạo hóa đơn");
+            }
+
         }
     }
 }
