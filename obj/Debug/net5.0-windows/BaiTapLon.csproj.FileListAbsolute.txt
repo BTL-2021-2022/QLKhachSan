@@ -188,3 +188,5 @@ C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.
 E:\BTL\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DangNhap.resources
 >>>>>>> 434623feb6b0deba3ae4eae1c456ed1b701be29a
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.DangNhap.resources
+C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.fHoaDon.resources
+C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.fPhieuDichVu.resources

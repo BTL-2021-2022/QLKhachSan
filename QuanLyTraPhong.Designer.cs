@@ -41,7 +41,6 @@ namespace BaiTapLon
             this.txtgiaPhong = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtTienDichVu = new System.Windows.Forms.TextBox();
-            this.txtDichVu = new System.Windows.Forms.TextBox();
             this.txtTienPhong = new System.Windows.Forms.TextBox();
             this.txtSoNgayO = new System.Windows.Forms.TextBox();
             this.txtPhong = new System.Windows.Forms.TextBox();
@@ -52,7 +51,6 @@ namespace BaiTapLon
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -130,6 +128,7 @@ namespace BaiTapLon
             this.btnThoat.TabIndex = 48;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnTaoHoaDon
             // 
@@ -148,6 +147,7 @@ namespace BaiTapLon
             this.btnTinhTien.TabIndex = 46;
             this.btnTinhTien.Text = "Tính tiền";
             this.btnTinhTien.UseVisualStyleBackColor = true;
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // btnTraPhong
             // 
@@ -185,7 +185,7 @@ namespace BaiTapLon
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(1016, 535);
+            this.txtTongTien.Location = new System.Drawing.Point(1016, 519);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
             this.txtTongTien.Size = new System.Drawing.Size(221, 27);
@@ -193,19 +193,11 @@ namespace BaiTapLon
             // 
             // txtTienDichVu
             // 
-            this.txtTienDichVu.Location = new System.Drawing.Point(1016, 476);
+            this.txtTienDichVu.Location = new System.Drawing.Point(1016, 434);
             this.txtTienDichVu.Name = "txtTienDichVu";
             this.txtTienDichVu.ReadOnly = true;
             this.txtTienDichVu.Size = new System.Drawing.Size(221, 27);
             this.txtTienDichVu.TabIndex = 38;
-            // 
-            // txtDichVu
-            // 
-            this.txtDichVu.Location = new System.Drawing.Point(1016, 430);
-            this.txtDichVu.Name = "txtDichVu";
-            this.txtDichVu.ReadOnly = true;
-            this.txtDichVu.Size = new System.Drawing.Size(221, 27);
-            this.txtDichVu.TabIndex = 44;
             // 
             // txtTienPhong
             // 
@@ -277,7 +269,7 @@ namespace BaiTapLon
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(914, 535);
+            this.label15.Location = new System.Drawing.Point(919, 523);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(72, 20);
             this.label15.TabIndex = 29;
@@ -286,20 +278,11 @@ namespace BaiTapLon
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(906, 476);
+            this.label14.Location = new System.Drawing.Point(919, 434);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 20);
             this.label14.TabIndex = 28;
             this.label14.Text = "Tiền dịch vụ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(922, 430);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 20);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Mã dịch vụ";
             // 
             // label11
             // 
@@ -628,7 +611,6 @@ namespace BaiTapLon
             this.Controls.Add(this.txtgiaPhong);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtTienDichVu);
-            this.Controls.Add(this.txtDichVu);
             this.Controls.Add(this.txtTienPhong);
             this.Controls.Add(this.txtSoNgayO);
             this.Controls.Add(this.txtPhong);
@@ -639,7 +621,6 @@ namespace BaiTapLon
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
@@ -682,7 +663,6 @@ namespace BaiTapLon
         private System.Windows.Forms.TextBox txtgiaPhong;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.TextBox txtTienDichVu;
-        private System.Windows.Forms.TextBox txtDichVu;
         private System.Windows.Forms.TextBox txtTienPhong;
         private System.Windows.Forms.TextBox txtSoNgayO;
         private System.Windows.Forms.TextBox txtPhong;
@@ -693,7 +673,6 @@ namespace BaiTapLon
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;

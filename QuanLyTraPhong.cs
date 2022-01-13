@@ -169,13 +169,25 @@ namespace BaiTapLon
             if (viewPhieuDichVu.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 ViewPhieuThuePhong.CurrentRow.Selected = true;
-                txtDichVu.Text = viewPhieuDichVu.Rows[e.RowIndex].Cells["MaDV"].FormattedValue.ToString();
-                txtTienDichVu.Text = viewPhieuDichVu.Rows[e.RowIndex].Cells["TongTien"].FormattedValue.ToString();
+          
+                var tongtien = (from ptp in db.PhieuDichVus
+                                where ptp.MaPhieuThuePhong == viewPhieuDichVu.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].FormattedValue.ToString()
+                                select ptp);
+                double a = 0;
+                foreach (var group in tongtien)
+                {
 
-             /*   double a = double.Parse(txtTienDichVu.Text);
-                double b = double.Parse(txtTienPhong.Text);
-                double c = a + b;
-                txtTongTien.Text = c.ToString();*/
+                    double x = double.Parse(group.TongTien.ToString());
+                    a = a + x;
+
+                }
+                txtTienDichVu.Text = a.ToString();
+
+
+                /*   double a = double.Parse(txtTienDichVu.Text);
+                   double b = double.Parse(txtTienPhong.Text);
+                   double c = a + b;
+                   txtTongTien.Text = c.ToString();*/
             }
         }
 
@@ -217,6 +229,27 @@ namespace BaiTapLon
                 MessageBox.Show("Phòng này đã được trả");
             }
 
+        }
+
+        private void btnTinhTien_Click(object sender, EventArgs e)
+        {
+            if (txtTienDichVu.Text == null)
+            {
+                txtTienDichVu.Text = "0";
+            }
+            if (txtTienPhong.Text == null)
+            {
+                txtTienPhong.Text = "0";
+            }
+            double a = double.Parse(txtTienDichVu.Text) + double.Parse(txtTienPhong.Text);
+
+            txtTongTien.Text = a.ToString();
+            MessageBox.Show("Tổng tiền khách hàng cần thanh toán là: " + txtTongTien.Text);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
