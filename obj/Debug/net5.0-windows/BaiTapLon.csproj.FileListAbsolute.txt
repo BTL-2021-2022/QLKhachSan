@@ -190,3 +190,4 @@ E:\BTL\BaiTapLon\obj\Debug\net5.0-windows\BaiTapLon.DangNhap.resources
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.DangNhap.resources
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.fHoaDon.resources
 C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.fPhieuDichVu.resources
+C:\Users\Admin\Desktop\BtlWindows\QLKhachSan\obj\Debug\net5.0-windows\BaiTapLon.QuanLyDatPhong.resources

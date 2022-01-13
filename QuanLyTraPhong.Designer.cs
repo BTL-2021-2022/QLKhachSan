@@ -126,7 +126,7 @@ namespace BaiTapLon
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(94, 29);
             this.btnThoat.TabIndex = 48;
-            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Text = "Clear";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -138,6 +138,7 @@ namespace BaiTapLon
             this.btnTaoHoaDon.TabIndex = 47;
             this.btnTaoHoaDon.Text = "Tạo hóa đơn thanh toán";
             this.btnTaoHoaDon.UseVisualStyleBackColor = true;
+            this.btnTaoHoaDon.Click += new System.EventHandler(this.btnTaoHoaDon_Click);
             // 
             // btnTinhTien
             // 

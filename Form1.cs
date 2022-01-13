@@ -53,7 +53,7 @@ namespace BaiTapLon
 
         private void trảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuanLyTraPhong f = new QuanLyTraPhong();
+            QuanLyTraPhong f = new QuanLyTraPhong(user);
             f.Show();
         }
 
@@ -73,6 +73,12 @@ namespace BaiTapLon
         {
             fHoaDon fhd = new fHoaDon(user);
             fhd.Show();
+        }
+
+        private void đặtPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyDatPhong f = new QuanLyDatPhong();
+            f.Show();
         }
     }
 }

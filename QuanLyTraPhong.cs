@@ -12,11 +12,19 @@ namespace BaiTapLon
 {
     public partial class QuanLyTraPhong : Form
     {
+        string user;
+        QLKhachSanContext db = new QLKhachSanContext();
         public QuanLyTraPhong()
         {
             InitializeComponent();
         }
-        QLKhachSanContext db = new QLKhachSanContext();
+   
+      
+        public QuanLyTraPhong(string user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
         private void phieuthuephong()
         {
             var query1 = from phong in db.PhieuThuePhongs
@@ -47,6 +55,7 @@ namespace BaiTapLon
             phong();
             phieuthuephong();
             dichvu();
+           
         }
 
         private void btnTimPhieuThue_Click(object sender, EventArgs e)
@@ -131,32 +140,25 @@ namespace BaiTapLon
 
         private void ViewPhieuThuePhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(ViewPhieuThuePhong.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                ViewPhieuThuePhong.CurrentRow.Selected = true;
-                txtPhieuThue.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaPhieuThuePhong"].FormattedValue.ToString();
-                txtMaKH.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaKH"].FormattedValue.ToString();
-                txtPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaPhong"].FormattedValue.ToString();
-                txtNgayDen.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["NgayDen"].FormattedValue.ToString();
-                txtgiaPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].FormattedValue.ToString();
-                txtNgayDi.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["NgayDi"].FormattedValue.ToString();
-
-                if (txtNgayDi.Text !=null)
+                if (ViewPhieuThuePhong.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    string a = txtNgayDen.Text;
-                    txtNgayDi.Text = DateTime.Now.ToString();
-                    string b = txtNgayDi.Text;
-                    TimeSpan timeSpan;
+                    ViewPhieuThuePhong.CurrentRow.Selected = true;
+                    txtPhieuThue.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaPhieuThuePhong"].FormattedValue.ToString();
+                    txtMaKH.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaKH"].FormattedValue.ToString();
+                    txtPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["MaPhong"].FormattedValue.ToString();
+                    txtNgayDen.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["NgayDen"].FormattedValue.ToString();
+                    txtgiaPhong.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].FormattedValue.ToString();
+                    txtNgayDi.Text = ViewPhieuThuePhong.Rows[e.RowIndex].Cells["NgayDi"].FormattedValue.ToString();
 
-                    DateTime c = DateTime.Parse(a);
-                    DateTime d = d = DateTime.Now;
-                    timeSpan = d - c;
-
-                    txtSoNgayO.Text = timeSpan.Days.ToString();
-                    double x = double.Parse(txtSoNgayO.Text) * double.Parse(txtgiaPhong.Text);
-                    txtTienPhong.Text = x.ToString();
+                   
                 }
             }
+            catch(Exception ) {
+               
+            };
+          
         }
 
         private void viewPhieuDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -166,6 +168,7 @@ namespace BaiTapLon
 
         private void viewPhieuDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try {
             if (viewPhieuDichVu.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 ViewPhieuThuePhong.CurrentRow.Selected = true;
@@ -183,12 +186,9 @@ namespace BaiTapLon
                 }
                 txtTienDichVu.Text = a.ToString();
 
-
-                /*   double a = double.Parse(txtTienDichVu.Text);
-                   double b = double.Parse(txtTienPhong.Text);
-                   double c = a + b;
-                   txtTongTien.Text = c.ToString();*/
             }
+            }
+            catch (Exception) { };
         }
 
         private void ViewPhong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -203,7 +203,8 @@ namespace BaiTapLon
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-            if (txtNgayDi.Text == null)
+
+            if (txtNgayDi.Text == "")
             {
                 string a = txtNgayDen.Text;
                 txtNgayDi.Text = DateTime.Now.ToString();
@@ -233,11 +234,11 @@ namespace BaiTapLon
 
         private void btnTinhTien_Click(object sender, EventArgs e)
         {
-            if (txtTienDichVu.Text == null)
+            if (txtTienDichVu.Text == "")
             {
                 txtTienDichVu.Text = "0";
             }
-            if (txtTienPhong.Text == null)
+            if (txtTienPhong.Text == "")
             {
                 txtTienPhong.Text = "0";
             }
@@ -249,7 +250,23 @@ namespace BaiTapLon
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-          
+            txtPhieuThue.Clear();
+            txtMaKH.Clear();
+            txtPhong.Clear();
+            txtgiaPhong.Clear();
+            txtNgayDen.Clear();
+            txtNgayDi.Clear();
+            txtSoNgayO.Clear();
+            txtTienPhong.Clear();
+            txtTienDichVu.Clear();
+            txtTongTien.Clear();
+        }
+
+        private void btnTaoHoaDon_Click(object sender, EventArgs e)
+        {
+            fHoaDon fhd = new fHoaDon(user);
+            fhd.Show();
+            
         }
     }
 }

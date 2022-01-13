@@ -19,6 +19,9 @@
     <Compile Update="QLPhong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="QuanLyDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="QuanLyDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
