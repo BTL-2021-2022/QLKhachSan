@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Hg0TR2jk3JvykgSqTQPlNIDQNG/Sdh5+QeRaP2pfn8CYWOZItgLdLpSBwQBhTbXuZw/Er0j2GMzuuqVeGBcCg==",
+  "dgSpecHash": "U0NBwG7niZn1PWn2SgSI4o8voJfe51dyNt+VEQHnDiMRAK93+GoAuuKA0ehmlc/ltJ/AO1nbNJU35M9hqOghuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\BtlWindows\\QLKhachSan\\BaiTapLon.csproj",
+  "projectFilePath": "E:\\QLKhachSan\\BaiTapLon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

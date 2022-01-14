@@ -80,5 +80,23 @@ namespace BaiTapLon
             QuanLyDatPhong f = new QuanLyDatPhong();
             f.Show();
         }
+
+        private void trảPhòngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            QuanLyTraPhong f = new QuanLyTraPhong(user);
+            f.Show();
+        }
+
+        private void đặtPhòngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            QuanLyDatPhong f = new QuanLyDatPhong();
+            f.Show();
+        }
+
+        private void sửDụngDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fPhieuDichVu pdv = new fPhieuDichVu();
+            pdv.Show();
+        }
     }
 }
