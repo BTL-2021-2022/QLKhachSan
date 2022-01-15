@@ -195,8 +195,8 @@ namespace BaiTapLon
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-
-            if (txtNgayDi.Text == "")
+            try { 
+                if (txtNgayDi.Text == "")
             {
                 string a = txtNgayDen.Text;
                 txtNgayDi.Text = DateTime.Now.ToString();
@@ -215,8 +215,8 @@ namespace BaiTapLon
                                      select ptp).FirstOrDefault();
                 pt.NgayDi = DateTime.Parse(txtNgayDi.Text);
                 db.SaveChanges();
-                btnTaoHoaDon.Visible=true;
-                btnTinhTien.Visible=true;
+                btnTaoHoaDon.Visible = true;
+                btnTinhTien.Visible = true;
                 phieuthuephong();
             }
             else
@@ -225,6 +225,9 @@ namespace BaiTapLon
                 btnTaoHoaDon.Visible = false;
                 btnTinhTien.Visible = false;
             }
+            }
+            catch (Exception) { };
+           
 
         }
 
@@ -262,6 +265,7 @@ namespace BaiTapLon
         {
             if(txtNgayDi.Text != "")
             {
+
                 fHoaDon fhd = new fHoaDon(user);
                 fhd.Show();
             }
